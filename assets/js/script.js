@@ -19,6 +19,7 @@ function buildplanner() {
 
     var input = document.createElement("input");
     input.setAttribute("type", "text");
+    input.value = savedInputs[i];
     row.appendChild(input);
 
     var save = document.createElement("button");
@@ -31,8 +32,9 @@ function buildplanner() {
 
 function saveInput(event) {
   var position = event.target.getAttribute("id");
-  event.target.innerText = "234234";
+  //event.target.innerText = "234234";
   savedInputs[position] = "234234";
+  localStorage.setItem("savedInputs", JSON.stringify(savedInputs));
 }
 
 //show current date in header
