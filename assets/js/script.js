@@ -1,5 +1,11 @@
 var planner = document.getElementById("planner");
-// var savedInputs= localStorage.getItem("savedNote")) || [];
+var savedInputs = JSON.parse(localStorage.getItem("savedInputs"));
+if (savedInputs == undefined) {
+  savedInputs = [];
+  for (let i = 0; i < 24; i++) {
+    savedInputs.push(" ");
+  }
+}
 buildplanner();
 function buildplanner() {
   for (let i = 0; i < 24; i++) {
@@ -17,13 +23,16 @@ function buildplanner() {
 
     var save = document.createElement("button");
     save.innerText = "SAVE";
+    save.setAttribute("id", i);
     row.appendChild(save);
     save.addEventListener("click", saveInput);
   }
 }
 
 function saveInput(event) {
-  alert("Hello! I am an alert box!!");
+  var position = event.target.getAttribute("id");
+  event.target.innerText = "234234";
+  savedInputs[position] = "234234";
 }
 
 //show current date in header
