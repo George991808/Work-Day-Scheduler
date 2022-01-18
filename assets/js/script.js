@@ -32,8 +32,7 @@ function buildplanner() {
 
 function saveInput(event) {
   var position = event.target.getAttribute("id");
-  //event.target.innerText = "234234";
-  savedInputs[position] = "234234";
+  savedInputs[position] = event.target.previousSibling.value;
   localStorage.setItem("savedInputs", JSON.stringify(savedInputs));
 }
 
