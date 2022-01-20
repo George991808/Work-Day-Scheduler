@@ -8,4 +8,9 @@ section {
 }
 * {
   text-align: center;
+  margin: 10px;
+}
+input {
+  margin-right: 10px;
+  width: 40%;
 }

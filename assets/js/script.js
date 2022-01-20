@@ -8,7 +8,7 @@ if (savedInputs == undefined) {
 }
 buildplanner();
 function buildplanner() {
-  for (let i = 0; i < 24; i++) {
+  for (let i = 9; i < 18; i++) {
     var row = document.createElement("div");
     row.setAttribute("class", "row");
 
