@@ -14,3 +14,15 @@ input {
   margin-right: 10px;
   width: 40%;
 }
+
+.past {
+  background-color: darkgray;
+}
+
+.now {
+  background-color: lightskyblue;
+}
+
+.future {
+  background-color: darkseagreen;
+}

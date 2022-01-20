@@ -1,3 +1,5 @@
+var now = moment();
+var time;
 var planner = document.getElementById("planner");
 var savedInputs = JSON.parse(localStorage.getItem("savedInputs"));
 if (savedInputs == undefined) {
@@ -8,9 +10,17 @@ if (savedInputs == undefined) {
 }
 buildplanner();
 function buildplanner() {
-  for (let i = 9; i < 18; i++) {
+  for (let i = 0; i < 24; i++) {
+    if (i < now.hour()) {
+      time = "past";
+    } else if (now.hour() === i) {
+      time = "now";
+    } else {
+      time = "future";
+    }
     var row = document.createElement("div");
-    row.setAttribute("class", "row");
+    row.setAttribute("class", "row " + time);
+    // row.setAttribute("class", color);
 
     planner.appendChild(row);
     var timeslot = document.createElement("div");
