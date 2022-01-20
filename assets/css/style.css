@@ -9,10 +9,15 @@ section {
 * {
   text-align: center;
   margin: 10px;
+  margin-top: 3px;
 }
 input {
   margin-right: 10px;
+  margin-left: 10px;
   width: 40%;
+  margin-top: 5px;
+
+  margin-bottom: 5px;
 }
 
 .past {
